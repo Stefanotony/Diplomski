@@ -181,7 +181,7 @@ footer p {
       rgba(30, 30, 30, 0.3196) 26.04%,
       rgba(0, 0, 0, 0.6) 100%
     ),
-    url("images/moviep-p1.jpg");
+    url("../images/moviep-p1.jpg");
   background-size: cover;
   position: relative;
 }
