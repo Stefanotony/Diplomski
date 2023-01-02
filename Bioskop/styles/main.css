@@ -1,5 +1,5 @@
 body {
-  background-color: #cbcbcb;
+  background-color: #f7f7f7;
 }
 
 .navbar-nav {
@@ -12,7 +12,6 @@ body {
   height: 38rem;
   color: #fffafb;
   position: relative;
-  text-transform: uppercase;
 }
 
 .carousel-item img {
@@ -26,9 +25,9 @@ body {
   content: "";
   background-image: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(30, 30, 30, 0.3) 50%,
-    rgba(0, 0, 0, 0.8) 80%
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(30, 30, 30, 0.6) 50%,
+    rgba(0, 0, 0, 0.9) 80%
   );
   display: block;
   position: absolute;
@@ -44,10 +43,14 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  padding-bottom: 3rem;
+  padding-bottom: 8rem;
 }
 
-.c p {
+.carousel-p {
+  font-size: 16px;
+}
+
+.carousel-datum {
   margin: 0;
   padding: 0;
   font-size: 1.375rem;
@@ -73,9 +76,53 @@ body {
 
 /* Slike carousel */
 
+.carousel-control.right {
+  background-image: none;
+}
+
+.carousel-control.left {
+  background-image: none;
+}
+
 .item img {
   max-height: 470px;
   width: 350px;
+}
+
+.pocetna_slike {
+  border-radius: 1%;
+  height: 400px;
+  display: block;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.kon:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* Div sa informacijama o filmu */
@@ -464,4 +511,19 @@ input[type="submit"]:hover {
     height: 350px;
     width: 90%;
   }
+}
+
+/* LOADER */
+
+.loader-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }
